@@ -1,5 +1,5 @@
 {
-  "name": "promiseleak",
+  "name": "hangcheck",
   "version": "0.1.0",
   "description": "Find asynchronous work that never finishes — hanging promises with where they were created.",
   "author": {
@@ -37,9 +37,9 @@
     "timeout",
     "pending"
   ],
-  "repository": { "type": "git", "url": "git+https://github.com/igu1/promiseleak.git" },
-  "bugs": { "url": "https://github.com/igu1/promiseleak/issues" },
-  "homepage": "https://github.com/igu1/promiseleak#readme",
+  "repository": { "type": "git", "url": "git+https://github.com/igu1/hangcheck.git" },
+  "bugs": { "url": "https://github.com/igu1/hangcheck/issues" },
+  "homepage": "https://github.com/igu1/hangcheck#readme",
   "devDependencies": {
     "tsup": "^8.5.0",
     "tsx": "^4.20.0",

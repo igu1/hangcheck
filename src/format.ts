@@ -5,7 +5,7 @@ export function getCallSite(): { file: string; line: number; text: string } | un
   for (const line of lines) {
     if (!line.includes("at ")) continue;
     if (line.includes("node:internal")) continue;
-    if (line.includes("promiseleak/src/") || line.includes("promiseleak/dist/")) continue;
+    if (line.includes("hangcheck/src/") || line.includes("hangcheck/dist/")) continue;
     if (line.includes("node_modules")) continue;
 
     const match = line.match(

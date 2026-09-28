@@ -1,4 +1,4 @@
-# promiseleak
+# hangcheck
 
 **Find asynchronous work that never finishes.**
 
@@ -6,19 +6,19 @@
 
 Applications accumulate promises that never resolve: forgotten resolves,
 retries with no timeout, queues waiting forever. Tests hang. Requests pile up.
-`promiseleak` tracks explicit promises and tells you which one is stuck and
+`hangcheck` tracks explicit promises and tells you which one is stuck and
 where it was created.
 
 ## Install
 
 ```bash
-npm i promiseleak
+npm i hangcheck
 ```
 
 ## Usage
 
 ```ts
-import { track } from "promiseleak";
+import { track } from "hangcheck";
 
 await track("confirm-payment", confirmPayment());
 ```
@@ -42,7 +42,7 @@ change.
 ### Groups
 
 ```ts
-import { trackGroup } from "promiseleak";
+import { trackGroup } from "hangcheck";
 
 await trackGroup("checkout", [
   reserveInventory(),
@@ -62,7 +62,7 @@ await trackGroup("checkout", [
 ### Configure
 
 ```ts
-import { configure } from "promiseleak";
+import { configure } from "hangcheck";
 
 configure({
   warnAfter: 5_000,     // first warning
@@ -74,7 +74,7 @@ configure({
 ### Registry / tests
 
 ```ts
-import { registry, configure } from "promiseleak";
+import { registry, configure } from "hangcheck";
 
 configure({ output: "buffer" });
 // ... run your app / test

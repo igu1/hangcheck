@@ -1,6 +1,6 @@
 import * as pl from "../src/index";
 
-console.log("\x1b[90m$ npm i promiseleak\n\x1b[0m");
+console.log("\x1b[90m$ npm i hangcheck\n\x1b[0m");
 
 // Never-settling promise — the classic "I forgot to await/resolve" leak
 const neverResolves = new Promise<void>(() => {
